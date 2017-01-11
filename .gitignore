@@ -17,3 +17,7 @@
 .byebug_history
 
 /public/assets
+
+
+### misc ###
+/config/global/secrets.yml
