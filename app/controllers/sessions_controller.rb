@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    @user = User.new
-    @account = @user.oauth_accounts.find_or_initialize_by(
+    @account = OauthAccount.find_or_initialize_by(
       uid: auth_hash['uid'],
       provider: auth_hash['provider']
     )
@@ -19,10 +18,12 @@ class SessionsController < ApplicationController
       @account.credentials = credentials.to_json
       @account.raw_info = auth_hash['extra']['raw_info'].to_json
     end
+    @user = @account.user
     @user.name = @account.name
     @user.login_name = @account.nickname
     @user.save!
-    redirect_to '/'
+    token = encode_token(@user)
+    redirect_to root_path(token: token)
   end
 
   protected

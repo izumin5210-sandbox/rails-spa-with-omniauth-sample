@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'global'
 
+gem 'jwt'
+
 gem 'omniauth'
 gem 'omniauth-github'
 

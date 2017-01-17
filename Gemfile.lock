@@ -240,6 +240,7 @@ DEPENDENCIES
   factory_girl_rails
   global
   jbuilder (~> 2.5)
+  jwt
   listen (~> 3.0.5)
   meowcop
   omniauth
