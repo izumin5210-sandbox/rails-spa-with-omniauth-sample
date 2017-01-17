@@ -1,33 +1,19 @@
-# Rails and Modern-Frontend Stack with Docker
+# Rails SPA with OmniAuth
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)][license]
 
 ## Features
-### Server
-[Dockerfile](Dockerfile) (`ruby:2.4.0-alpine`)
+Based on [izumin5210/rails-modern-frontend-with-docker-sample](https://github.com/izumin5210-sandbox/rails-modern-frontend-with-docker-sample)
 
-- Ruby 2.4.0
-- Ruby on Rails 5.0.x
-- RSpec 3.5.x
-- Rubocop / Meowcop
-- PostgreSQL 9.6.1
+### Server
+
+- Multiprovider authentication: OmniAuth
+- Access token: JWT (generating with jwt gem)
 
 
 ### Client
-[Dockerfile](client/Dockerfile) (`node:6.9.4`)
 
-- bulid
-    - Yarn 0.18.1
-    - Babel 6.21.x
-    - Webpack 2.2.x
-- JS
-    - React 15.4.x
-    - Mocha + power-assert ( + testdouble.js )
-    - ESLint 3.13.x
-    - Flow 0.37.x
-    - unassert
-- CSS
-    - PostCSS 5.2.x
-    - stylelint
+- Redux + redux-actions + redux-saga
+- Access token store: localStorage
 
 
 ## Usage
