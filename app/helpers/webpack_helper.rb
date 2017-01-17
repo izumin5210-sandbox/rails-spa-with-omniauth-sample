@@ -4,7 +4,7 @@ module WebpackHelper
   end
 
   def manifest
-    @manifest ||= JSON.parse(File.read('manifest.json'))
+    @manifest ||= JSON.parse(File.read(Rails.root.join('public', 'assets', 'manifest.json')))
   rescue
     fail 'Please run webpack'
   end
