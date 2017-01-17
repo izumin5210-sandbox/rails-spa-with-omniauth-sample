@@ -15,7 +15,10 @@ const config = {
   devtool: 'inline-source-map',
 
   entry: {
-    index: './src/index',
+    index: [
+      'babel-polyfill',
+      './src/index'
+    ],
   },
 
   module: {
